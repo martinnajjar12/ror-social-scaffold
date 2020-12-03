@@ -4,8 +4,8 @@
 
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+- Ruby v2.7.1
+- Ruby on Rails v6.0.3.4
 
 ## Live Demo
 
@@ -69,9 +69,19 @@ Open `http://localhost:3000/` in your browser.
 
 TBA
 
-## Authors
 
-TBA
+## Author 1
+
+- Github: [@martinnajjar12](https://github.com/martinnajjar12)
+- Twitter: [@martin_najjar](https://twitter.com/martin_najjar)
+- LinkedIn: [Martin Najjar](https://www.linkedin.com/in/martinnajjar12/)
+
+## Author 2
+
+- Github: [@githubhandle](https://github.com/Kingobaino1)
+- Twitter: [@twitterhandle](https://twitter.com/ibehkingso)
+- Linkedin: [linkedin](https://www.linkedin.com/in/kingsley-ibeh)
+
 
 ## 🤝 Contributing
 
@@ -85,9 +95,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+Microverse and TheOdin Project
 
-## 📝 License
-
-TBA
 
