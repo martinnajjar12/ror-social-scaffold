@@ -2,6 +2,8 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+![screenshot](./app/assets/images/Social-media.png)
+
 ## Built With
 
 - Ruby v2.7.1
@@ -10,7 +12,6 @@
 ## Live Demo
 
 TBA
-
 
 ## Getting Started
 
@@ -46,7 +47,6 @@ To make sure the linters' checks using Github Actions work properly, you should 
 3. Start working on your milestone as usual.
 4. Open a PR from the `feature/branch` when your work is done.
 
-
 ### Usage
 
 Start server with:
@@ -69,7 +69,6 @@ Open `http://localhost:3000/` in your browser.
 
 TBA
 
-
 ## Author 1
 
 - Github: [@martinnajjar12](https://github.com/martinnajjar12)
@@ -81,7 +80,6 @@ TBA
 - Github: [@githubhandle](https://github.com/Kingobaino1)
 - Twitter: [@twitterhandle](https://twitter.com/ibehkingso)
 - Linkedin: [linkedin](https://www.linkedin.com/in/kingsley-ibeh)
-
 
 ## 🤝 Contributing
 
@@ -96,5 +94,3 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 Microverse and TheOdin Project
-
-
