@@ -11,4 +11,12 @@ RSpec.describe Friendship, type: :model do
   it 'is not valid with invalid attributes' do
     expect(user1.friendships.build(friend_id: 100, confirmed: true)).to be_invalid
   end
+
+  describe 'association with friend' do
+    it { should belong_to(:friend).class_name('User') }
+  end
+
+  describe 'association with user' do
+    it { should belong_to(:user) }
+  end
 end
