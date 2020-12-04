@@ -1,4 +1,4 @@
-class FriendshipsController < ApplicationController
+class FriendshipsController < UsersController
   before_action :authenticate_user!
   def index
     @friendships = Friendship.where(friend_id: current_user.id)
@@ -6,13 +6,17 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @friendship = current_user.friendships.build(friendship_params)
-    if @friendship.save
-      flash[:notice] = 'You have successfuly sent a friend request'
+    unless friends?
+      @friendship = current_user.friendships.build(friendship_params)
+      if @friendship.save
+        flash[:notice] = 'You have successfuly sent a friend request'
+      else
+        flash[:alert] = 'Friend request was not successful'
+      end
+      redirect_to root_path
     else
-      flash[:alert] = 'Friend request was not successful'
+      flash[:alert] = 'You are already friends'
     end
-    redirect_to root_path
   end
 
   def destroy
@@ -25,5 +29,13 @@ class FriendshipsController < ApplicationController
 
   def friendship_params
     params.permit(:friend_id)
+  end
+
+  def friends_ids
+    current_user.friends.pluck(:id)
+  end
+
+  def friends?
+    friends_ids.include?(friendship_params[:friend_id])
   end
 end
