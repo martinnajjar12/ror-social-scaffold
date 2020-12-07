@@ -6,7 +6,9 @@ class FriendshipsController < UsersController
   end
 
   def create
-    unless friends?
+    if friends?
+      flash[:alert] = 'You are already friends'
+    else
       @friendship = current_user.friendships.build(friendship_params)
       if @friendship.save
         flash[:notice] = 'You have successfuly sent a friend request'
@@ -14,8 +16,6 @@ class FriendshipsController < UsersController
         flash[:alert] = 'Friend request was not successful'
       end
       redirect_to root_path
-    else
-      flash[:alert] = 'You are already friends'
     end
   end
 
