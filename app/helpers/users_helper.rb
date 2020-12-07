@@ -3,7 +3,8 @@ module UsersHelper
     if current_user.friend_requests.include?(user)
       concat(list_group(user))
     elsif current_user.pending_friends.include?(user)
-      concat(content_tag(:span, (link_to 'Confirm', user_friendship_path(friendship_id(user), user.id), method: 'put', class: 'btn btn-primary')))
+      concat(content_tag(:span, (link_to 'Confirm', user_friendship_path(friendship_id(user), user.id),
+                                         method: 'put', class: 'btn btn-primary')))
       concat(content_tag(:span, (link_to 'Decline', user_friendship_path(current_user.id, friendship_id(user)),
                                          method: :delete, class: 'btn btn-danger')))
     elsif current_user == user

@@ -1,5 +1,4 @@
 module FriendshipsHelper
-
   def friendship_id(user)
     iterating_through_array(user) unless @friendships.nil?
   end
