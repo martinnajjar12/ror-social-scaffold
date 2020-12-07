@@ -2,6 +2,7 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+![screenshot](./app/assets/images/app_diagram.png)
 ![screenshot](./app/assets/images/Social-media.png)
 
 ## Built With
@@ -29,6 +30,12 @@ Instal gems with:
 
 ```
 bundle install
+```
+
+Install the required dependencies via:
+
+```
+yarn install --check-files
 ```
 
 Setup database with:
