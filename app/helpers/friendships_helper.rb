@@ -3,15 +3,17 @@ module FriendshipsHelper
     iterating_through_array(user) unless @friendships.nil?
   end
 
+  def pending_friends
+    @pending_friends.compact.each { |friend| concat(card(friend)) }&.nil?
+  end
+
+  private
+
   def iterating_through_array(user)
     ids_array = @friendships.pluck(:id, :friend_id, :user_id)
     ids_array.each do |sub_array|
       return Friendship.find(sub_array[0]).id if sub_array[1] == current_user.id && sub_array[2] == user.id
     end
-  end
-
-  def pending_friends
-    @pending_friends.compact.each { |friend| concat(card(friend)) }&.nil?
   end
 
   def card(friend)
