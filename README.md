@@ -3,7 +3,12 @@
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
 ![screenshot](./app/assets/images/app_diagram.png)
+
+<p align='center'><small>Database Diagram</small></p><br /><br />
+
 ![screenshot](./app/assets/images/Social-media.png)
+
+<p align='center'><small>A user interface screenshot</small></p><br /><br />
 
 ## Built With
 
@@ -36,6 +41,12 @@ Install the required dependencies via:
 
 ```
 yarn install --check-files
+```
+
+Or:
+
+```
+npm install
 ```
 
 Setup database with:
