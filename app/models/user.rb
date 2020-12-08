@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+         
+  devise :omniauthable, omniauth_providers: %i[facebook]
 
   validates :name, presence: true, length: { maximum: 20 }
 
@@ -29,5 +31,13 @@ class User < ApplicationRecord
 
   def friends_and_own_posts
     Post.where(user: (friends << self)).ordered_by_most_recent
+  end
+
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0, 20]
+      user.name = auth.info.name
+    end
   end
 end

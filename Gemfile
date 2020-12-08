@@ -40,6 +40,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 5.0.0.alpha3'
 gem 'devise'
 gem 'jquery-rails'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'omniauth-facebook'
 gem 'popper_js', '~> 1.14.5'
 gem 'sprockets-rails', require: 'sprockets/railtie'
 
@@ -47,6 +49,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner'
+  gem 'dotenv-rails'
   gem 'rspec-rails'
 end
 
