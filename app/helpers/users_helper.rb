@@ -15,6 +15,8 @@ module UsersHelper
     end
   end
 
+  private
+
   def list_group(user)
     content_tag :div, class: 'list-group' do
       concat(content_tag(:span, (button_to 'Pending Request', user_friendships_path(current_user.id),
