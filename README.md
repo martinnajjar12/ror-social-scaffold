@@ -2,15 +2,22 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+![screenshot](./app/assets/images/app_diagram.png)
+
+<p align='center'><small>Database Diagram</small></p><br /><br />
+
+![screenshot](./app/assets/images/Social-media.png)
+
+<p align='center'><small>A user interface screenshot</small></p><br /><br />
+
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+- Ruby v2.7.1
+- Ruby on Rails v6.0.3.4
 
 ## Live Demo
 
 TBA
-
 
 ## Getting Started
 
@@ -30,6 +37,18 @@ Instal gems with:
 bundle install
 ```
 
+Install the required dependencies via:
+
+```
+yarn install --check-files
+```
+
+Or:
+
+```
+npm install
+```
+
 Setup database with:
 
 ```
@@ -45,7 +64,6 @@ To make sure the linters' checks using Github Actions work properly, you should 
 2. Create the `feature/branch` and push.
 3. Start working on your milestone as usual.
 4. Open a PR from the `feature/branch` when your work is done.
-
 
 ### Usage
 
@@ -69,9 +87,17 @@ Open `http://localhost:3000/` in your browser.
 
 TBA
 
-## Authors
+## Author 1
 
-TBA
+- Github: [@martinnajjar12](https://github.com/martinnajjar12)
+- Twitter: [@martin_najjar](https://twitter.com/martin_najjar)
+- LinkedIn: [Martin Najjar](https://www.linkedin.com/in/martinnajjar12/)
+
+## Author 2
+
+- Github: [@githubhandle](https://github.com/Kingobaino1)
+- Twitter: [@twitterhandle](https://twitter.com/ibehkingso)
+- Linkedin: [linkedin](https://www.linkedin.com/in/kingsley-ibeh)
 
 ## 🤝 Contributing
 
@@ -85,9 +111,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
-
-## 📝 License
-
-TBA
-
+Microverse and TheOdin Project
