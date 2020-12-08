@@ -22,5 +22,7 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-
+<div class='actions'>
+  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: 'btn mb-3', style: 'background-color: #689f38; color: #fff' %>
+</div>
 <%= render "devise/shared/links" %>
