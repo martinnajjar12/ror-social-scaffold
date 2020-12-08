@@ -75,6 +75,8 @@ Start server with:
 
 Open `http://localhost:3000/` in your browser.
 
+**Note:** Sign in via Facebook may not work on your local machine because you don't have the access to the APP_ID and APP_SECRET.
+
 ### Run tests
 
 ```
