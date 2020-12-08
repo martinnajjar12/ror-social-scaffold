@@ -49,29 +49,27 @@ RSpec.describe User, type: :model do
   end
 
   describe 'association with friendships' do
-    it { should have_many(:inverse_friendships) }
-  end
-
-  describe 'association with friendships' do
     it { should have_many(:likes) }
   end
 
-  describe 'friends method' do
-    it 'returns an array' do
-      expect(user.friends).to be_an Array
-    end
+  describe 'association with friendships' do
+    it { should have_many(:confirmed_friendships) }
   end
 
-  describe 'pending_friends method' do
-    it 'returns an array' do
-      expect(user.pending_friends).to be_an Array
-    end
+  describe 'association with frienships' do
+    it { should have_many(:pending_friendships) }
   end
 
-  describe 'friend_requests method' do
-    it 'returns an array' do
-      expect(user.friend_requests).to be_an Array
-    end
+  describe 'association with frienships' do
+    it { should have_many(:pending_friends) }
+  end
+
+  describe 'association with frienships' do
+    it { should have_many(:inverted_friendships) }
+  end
+
+  describe 'association with frienships' do
+    it { should have_many(:friend_requests) }
   end
 
   describe 'friend? method' do

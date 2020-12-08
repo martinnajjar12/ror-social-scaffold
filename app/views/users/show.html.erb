@@ -4,7 +4,11 @@
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
-      <%= render @posts %>
+      <% if @posts.empty? %>
+        <li>Add <strong><%="#{@user.name.capitalize}"%></strong> as a friend in order to see their posts</li>
+      <% else %>
+        <%= render @posts %>
+      <% end %>
     </ul>
   </article>
 </section>

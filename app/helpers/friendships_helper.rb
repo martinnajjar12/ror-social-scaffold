@@ -26,8 +26,8 @@ module FriendshipsHelper
   def card_body(friend)
     content_tag :div, class: 'card-body' do
       concat(content_tag(:h5, friend.name, class: 'card-title'))
-      concat(content_tag(:span, (link_to 'Confirm', user_path(friend.id),
-                                         method: 'post', class: 'btn btn-primary mr-3')))
+      concat(content_tag(:span, (link_to 'Confirm', user_friendship_path(friendship_id(friend), friend.id),
+                                         method: 'put', class: 'btn btn-primary mr-3')))
       concat(content_tag(:span, (link_to 'Decline', user_friendship_path(current_user.id, friendship_id(friend)),
                                          method: :delete, class: 'btn btn-danger')))
     end

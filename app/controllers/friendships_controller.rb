@@ -21,6 +21,14 @@ class FriendshipsController < ApplicationController
     redirect_to root_path
   end
 
+  def update
+    friend = User.find(params[:id])
+    friendship = friend.friendships.find_by(friend_id: current_user.id)
+    friendship.confirm_friend
+    flash[:notice] = "#{User.find(params[:id]).name} has been added to your friends' list"
+    redirect_to user_path(params[:id])
+  end
+
   private
 
   def friendship_params
