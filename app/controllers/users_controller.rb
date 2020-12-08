@@ -8,7 +8,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.ordered_by_most_recent
+    @posts = if current_user.friend?(@user)
+               @user.posts.ordered_by_most_recent
+             else
+               []
+             end
     @friendships = Friendship.all { where friend.id == current_user.id }
   end
 end
