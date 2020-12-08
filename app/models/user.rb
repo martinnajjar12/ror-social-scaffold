@@ -18,7 +18,7 @@ class User < ApplicationRecord
   has_many :friend_requests, through: :inverted_friendships, source: :friend
 
   def decline_friend(user)
-    friendship = inverse_friendships.find { |frdship| frdship.user == user }
+    friendship = inverted_friendships.find { |frdship| frdship.user == user }
     friendship.destroy
     flash[:notice] = 'You declined the request!'
   end
