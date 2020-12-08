@@ -4,8 +4,16 @@
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
-      <% if @posts.empty? %>
+      <% if @user == current_user %>
+        <% if @posts.empty? %>
+          <li>You don't have any post yet.</li>
+        <% else %>
+          <%= render @posts %>
+        <% end %>
+      <% elsif !current_user.friend?(@user) %>
         <li>Add <strong><%="#{@user.name.capitalize}"%></strong> as a friend in order to see their posts</li>
+      <% elsif @posts.empty? %>
+        <li><strong><%= "#{@user.name.capitalize}" %></strong> doesn't have any post yet.</li>
       <% else %>
         <%= render @posts %>
       <% end %>

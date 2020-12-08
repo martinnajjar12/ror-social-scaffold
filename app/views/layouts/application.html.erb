@@ -26,7 +26,7 @@
       <% if current_user %>
         <div>
           <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'mr-3' %>
-          <%= "Signed In as #{current_user.name} "%>
+          <%= link_to "#{current_user.name}", user_path(current_user.id) %>
         </div>
       <% else %>
         <%= link_to 'Sign in', user_session_path %>
